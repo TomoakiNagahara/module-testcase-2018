@@ -1,0 +1,53 @@
+<?php
+/**
+ * unit-test:/unit/shadow-dom/chat/chat.html
+ *
+ * @creation  2018-10-16
+ * @version   1.0
+ * @package   unit-test
+ * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @copyright Tomoaki Nagahara All right reserved.
+ */
+?>
+<sdom name="chat">
+	<p>Please leave comment</p>
+	<form class="OP">
+		<input type="text" name="nickname" value="" />
+		<input type="text" name="comment"  value="" />
+		<button> submit </button>
+	</form>
+	<hr/>
+	<div for=''>
+		<div>
+			<span>{ nickname }</span>
+			<span>{ comment  }</span>
+		</div>
+	</div>
+	<style>
+	chat p {
+		color: red;
+	}
+	</style>
+	<script>
+	//	...
+	function onInsert(){
+		var url  = 'testcase:/api/chat/load';
+		var data = {};
+		$OP.Ajax.Post(url, data, function(json){
+			D(json);
+		}, function(e){
+			console.Error(e);
+		});
+	};
+
+	//	...
+	function onUpdate(){
+		//	function onUpdate()
+	};
+
+	//	...
+	function onDelete(){
+		//	function onDelete()
+	};
+	</script>
+</sdom>

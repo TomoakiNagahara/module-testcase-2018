@@ -1,0 +1,16 @@
+<?php
+/**
+ * unit-test:/index.phtml
+ *
+ * @creation  2018-04-17
+ * @version   1.0
+ * @package   unit-test
+ * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @copyright Tomoaki Nagahara All right reserved.
+ */
+?>
+<section id="testcase">
+	<h1>TEST CASE</h1>
+	<? App::Template('nav-right.phtml') ?>
+	<? App::Template($file, ['action'=>$action]) ?>
+</section>
